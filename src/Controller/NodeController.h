@@ -7,8 +7,21 @@
 
 #ifndef CONTROLLER_NODECONTROLLER_H_
 #define CONTROLLER_NODECONTROLLER_H_
+#include <string>
+#include "../Model/Node.h"
+#include "../Model/Node.cpp"
+#include "../Model/ArrayNode.h"
+#include "../Model/ArrayNode.cpp"
+using namespace std;
 
-class NodeController {
+class NodeController
+{
+private:
+	Node<string> stringNode;
+	Node<int> intNode;
+	ArrayNode<string> stringArrayNode;
+	ArrayNode<string> otherArrayNode;
+
 public:
 	NodeController();
 	virtual ~NodeController();

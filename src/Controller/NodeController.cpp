@@ -6,13 +6,28 @@
  */
 
 #include "NodeController.h"
+#include <iostream>
 
-NodeController::NodeController() {
-	// TODO Auto-generated constructor stub
+using namespace std;
+
+NodeController::NodeController()
+{
+	stringNode.setValue("adsf");
+	intNode.setValue(999);
+
+	stringArrayNode.setValue("Words in here :D");
+	otherArrayNode.setValue("linked node");
+	stringArrayNode.setNext(&otherArrayNode);
+}
+
+NodeController::~NodeController()
+{
 
 }
 
-NodeController::~NodeController() {
-	// TODO Auto-generated destructor stub
+void NodeController :: start()
+{
+	cout << "The contents of the stringNode are " << stringNode.getValue() << endl;
+	cout << "The contents of the stringArrayNode are: " << stringArrayNode.getValue() << endl;
+	cout << "This is connected to stringArrayNode" << (*stringArrayNode.getNext()).getValue() << endl;
 }
-
