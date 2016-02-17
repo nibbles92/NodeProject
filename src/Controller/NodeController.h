@@ -7,20 +7,20 @@
 
 #ifndef CONTROLLER_NODECONTROLLER_H_
 #define CONTROLLER_NODECONTROLLER_H_
+
 #include <string>
-#include "../Model/Node.h"
+#include "../Model/CTECArray.cpp"
 #include "../Model/Node.cpp"
-#include "../Model/ArrayNode.h"
 #include "../Model/ArrayNode.cpp"
+#include "../Model/Timer.h"
+
 using namespace std;
 
 class NodeController
 {
 private:
-	Node<string> stringNode;
-	Node<int> intNode;
-	ArrayNode<string> stringArrayNode;
-	ArrayNode<string> otherArrayNode;
+	CTECArray<int> * notHipsterInts;
+	Timer arrayTimer;
 
 public:
 	NodeController();

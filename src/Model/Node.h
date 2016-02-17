@@ -8,7 +8,7 @@
 #ifndef MODEL_NODE_H_
 #define MODEL_NODE_H_
 
-#include "Node.h"
+#include <iostream>
 
 template <class Type>
 class Node
@@ -18,10 +18,10 @@ private:
 	Node * pointers;
 public:
 	Node();
-	Node(Type value);
+	Node(const Type& value);
 	virtual ~Node();
 	Type getValue();
-	void setValue(Type value);
+	void setValue(const Type& value);
 	Node * getPointers();
 };
 
