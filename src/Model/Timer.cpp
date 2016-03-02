@@ -1,9 +1,3 @@
-/*
- * Timer.cpp
- *
- *  Created on: Feb 16, 2016
- *      Author: droc6148
- */
 
 #include <iostream>
 #include <iomanip>
@@ -44,7 +38,7 @@ void Timer::resetTimer()
 	executionTime = 0;
 }
 
-long Timer::getExecutionTimeInMicroseconds();
+long Timer::getExecutionTimeInMicroseconds()
 {
 	return executionTime;
 }

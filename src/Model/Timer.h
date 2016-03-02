@@ -19,7 +19,7 @@ public:
 	void stopTimer();
 	void resetTimer();
 	void displayTimerInformation();
-	void getExecutionTimeInMicroseconds();
+	long getExecutionTimeInMicroseconds();
 };
 
 #endif /* MODEL_TIMER_H_ */

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.1.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>80</x>
+      <y>80</y>
+      <w>550</w>
+      <h>260</h>
+    </coordinates>
+    <panel_attributes>Node.controller
+--
+bg=cyan</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>110</x>
+      <y>130</y>
+      <w>210</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>Node Controller
+--
+Node Controller::start();</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>370</x>
+      <y>130</y>
+      <w>210</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>Node Runner
+--
+base Controller();</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>80</x>
+      <y>360</y>
+      <w>640</w>
+      <h>300</h>
+    </coordinates>
+    <panel_attributes>Node.Model
+--
+bg=red
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>120</x>
+      <y>400</y>
+      <w>220</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>Array Node
+--
+vitrual Array();
+ArrayNode* getNext();
+void setNext(ArrayNode* next);</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>380</x>
+      <y>530</y>
+      <w>290</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>CTEC Array
+--
+virtual ~CTECArray();
+Ctec Array(int size);
+int getSize();
+Type get(int position();
+void set(int position, const Type&amp;value);
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>120</x>
+      <y>530</y>
+      <w>220</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>_object: Class_
+--
+Node();
+virtual ~Node;
+Node(const Type&amp;value);
+TYpe getValue();
+void setValue();
+Node* get Pointers();</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
