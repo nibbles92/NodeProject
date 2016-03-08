@@ -6,6 +6,7 @@
  */
 
 #include "CTECList.h"
+#include <assert.h>
 
 template<class Type>
 CTECList<Type>::CTECList()
@@ -19,7 +20,7 @@ CTECList<Type>::CTECList()
 template<class Type>
 CTECList<Type>::~CTECList()
 {
-	// TODO Auto-generated destructor stub
+
 }
 
 template<class Type>
@@ -41,13 +42,51 @@ Type CTECList<Type> :: removeFromFront()
 template<class Type>
 Type CTECList<Type> :: removeFromEnd()
 {
+	/**
+	 * Check size is valid
+	 * Create a return variable
+	 * loop until the next to last node
+	 * grab the value form the last node
+	 * delete the last node
+	 * set new last node as the end
+	 */
+	assert(size>0);
 
+	Type returnValue;
+
+	if(size == 1)
+	{
+		ArrayNode<Type> * toRemove = end;
+		returnValue = removeFromFront();
+		end = nullptr;
+		head = nullptr;
+		delete toRemove;
+	}
+	else
+	{
+		ArrayNode<Type> * current = head;
+		for(int index = 0; index < size - 1; index++)
+		{
+			current = current->getNext();
+		}
+		returnValue = end->getValue();
+		delete end;
+		current = end;
+		current->setNext(nullptr);
+
+	}
+
+	calculateSize();
+
+	return returnValue;
 }
 
 template<class Type>
 Type CTECList<Type> :: removeFromIndex(int index)
 {
 	assert(this->size > 0);
+	assert(index >= 0);
+	assert(index < size);
 	assert(index >= 0 && index < size);
 
 	Type thingToRemove;
@@ -71,7 +110,7 @@ Type CTECList<Type> :: removeFromIndex(int index)
 }
 
 template<class Type>
-	void CTECList<Type> :: calculateSize()
+void CTECList<Type> :: calculateSize()
 	{
 		assert(size >= 0);
 
